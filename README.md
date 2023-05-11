@@ -57,7 +57,7 @@ Este endpoint permite obtener la información geográfica de una dirección.
 **Ejemplo de uso**
 
 ```bash
-GET http://localhost:3000/api/geocode/address/Av.%20El%20Retiro%209800%20pudahuel
+GET http://localhost:3000/api/v1/geocode/address/Av.%20El%20Retiro%209800%20pudahuel
 ```
 
 ### Endpoint de autocompletado
@@ -99,7 +99,7 @@ Este endpoint permite autocompletar direcciones.
 **Ejemplo de uso**
 
 ```bash
-GET http://localhost:3000/api/autocomplete/Avenida%20el%20Retiro%209800
+GET http://localhost:3000/api/v1/autocomplete/Avenida%20el%20Retiro%209800
 ```
 
 ### Docker
@@ -108,7 +108,7 @@ También puedes correr la aplicación utilizando Docker. Para ello, asegúrate d
 
 ```bash
 docker build -t poc-api-google-ts .
-docker run -p 8080:3000 -e GOOGLE_MAPS_API_KEY="TU_API_KEY" poc-api-google-ts
+docker run -p 3000:3000 -e GOOGLE_MAPS_API_KEY="TU_API_KEY" poc-api-google-ts
 ```
 
 Reemplaza **TU_API_KEY** con tu propia clave de API de Google Maps.
